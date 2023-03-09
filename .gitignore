@@ -1,0 +1,42 @@
+# Ignorar arquivos e pastas gerados pela compilação
+build/
+bin/
+*.o
+*.d
+*.exe
+
+# Ignorar arquivos de configuração
+*.cache
+*.log
+*.ini
+*.conf
+
+# Ignorar arquivos de sistema
+*.swp
+*.swo
+*.DS_Store
+
+# Ignorar arquivos de dependências e bibliotecas
+*.a
+*.so
+*.dylib
+
+# Ignorar arquivos de backup
+*~
+.#*
+
+# Ignorar arquivos temporários
+*.tmp
+*.bak
+*.old
+*.temp
+*.TMP
+*.BAK
+*.OLD
+*.TEMP
+
+# Ignorar arquivos de compilação do CMake
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
