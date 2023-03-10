@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "./hello.h"
+#include <hello.h>
 
 using namespace std;
 
