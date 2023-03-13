@@ -1,3 +1,3 @@
 #pragma once
 
-void PrintBlah();
+int Sum(int a, int b);

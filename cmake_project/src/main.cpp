@@ -7,7 +7,5 @@ using namespace std;
 
 int main(){
     PrintHello();
-    PrintBlah();
-    
     return 0;
 }
