@@ -15,7 +15,7 @@ public:
     int width() const { return width_; }
     int height() const { return height_; }
 
-    void print() const
+    virtual void print() const
     {
         cout << "rect: " << width_ << " " << height_ << endl;
     }
@@ -26,7 +26,7 @@ class Square : public Rect
 public:
     explicit Square(int size) : Rect(size, size) {}
 
-    void print() const
+    void print() const override
     {
         cout << "square: " << width_ << " " << height_ << endl;
     }
