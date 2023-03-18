@@ -5,7 +5,7 @@ using namespace std;
 
 class Rect
 {
-private:
+protected:
     int width_ = 0;
     int height_ = 0;
 
@@ -14,18 +14,31 @@ public:
 
     int width() const { return width_; }
     int height() const { return height_; }
+
+    void print() const
+    {
+        cout << "rect: " << width_ << " " << height_ << endl;
+    }
 };
 
 class Square : public Rect
 {
 public:
     explicit Square(int size) : Rect(size, size) {}
+
+    void print() const
+    {
+        cout << "square: " << width_ << " " << height_ << endl;
+    }
 };
 
 int main()
 {
     Square square(10);
+    square.print();
 
-    cout << "rect: " << square.width() << " " << square.height() << endl;
+    Rect& rect_ref = square;
+    rect_ref.print();
+
     return 0;
 }
