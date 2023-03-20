@@ -3,7 +3,13 @@ using namespace std;
 
 // herança
 
-class Rect
+class Printable
+{
+public:
+    virtual void print() const = 0; // 0 it's just a pure virtual function
+};
+
+class Rect : public Printable
 {
 protected:
     int width_ = 0;
@@ -15,7 +21,7 @@ public:
     int width() const { return width_; }
     int height() const { return height_; }
 
-    virtual void print() const
+    void print() const override
     {
         cout << "rect: " << width_ << " " << height_ << endl;
     }
@@ -32,13 +38,18 @@ public:
     }
 };
 
+void print(Rect &rect)
+{
+    rect.print();
+}
+
 int main()
 {
-    Square square(10);
-    square.print();
+    Rect rect(10, 10);
+    print(rect);
 
-    Rect& rect_ref = square;
-    rect_ref.print();
+    Square square(10);
+    print(square);
 
     return 0;
 }
