@@ -16,15 +16,19 @@ public:
 
         return sqrt(x_diff * x_diff + y_diff * y_diff);
     }
+
+    static float distance(const Point &a, const Point &b)
+    {
+        return a.distance(b);
+    }
 };
-
-
 
 int main()
 {
     Point a(1, 1);
     Point b(2, 2);
 
-    std::cout << "The distance is " << a.distance(b) << std::endl; 
+    std::cout << "The distance is " << a.distance(b) << std::endl;
+    std::cout << "The distance is " << Point::distance(a, b) << std::endl;
     return 0;
 }
